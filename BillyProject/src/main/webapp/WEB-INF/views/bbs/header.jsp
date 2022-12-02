@@ -17,8 +17,7 @@
     <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="resources/img/download.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-          Billy
+          <img src="resources/img/KakaoTalk_20221202_161607974.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
         </a>
       </div>
     </nav>
