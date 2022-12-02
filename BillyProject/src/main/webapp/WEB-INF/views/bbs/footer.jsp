@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="./bbs/header.jsp"%>
-	<%@ include file="./bbs/nav.jsp"%>
-	메인화면
-	<%@ include file="./bbs/footer.jsp"%>
+	<hr>
+	개발자 : 김진호, 박영신 , 문상연
 </body>
 </html>
