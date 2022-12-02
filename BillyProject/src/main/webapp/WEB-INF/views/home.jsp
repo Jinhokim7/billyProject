@@ -6,9 +6,7 @@
 </head>
 <body>
 <h1>
-
-	Hello world!ASDFASDF  
-
+	왜 안되냐,,,,, ㅎ,,,,ㅜㅠㅠㅠㅠㅠㅠ
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
