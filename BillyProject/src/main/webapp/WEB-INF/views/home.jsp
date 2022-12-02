@@ -11,7 +11,8 @@
 
 	<%@ include file="./bbs/header.jsp"%>
 	<%@ include file="./bbs/nav.jsp"%>
-	메인화면
+	<%@ include file="./bbs/notice.jsp"%>
+	<%@ include file="./bbs/list.jsp"%>
 	<%@ include file="./bbs/footer.jsp"%>
 
 </body>

@@ -11,32 +11,30 @@
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+  <style>
+  	.nav-item{
+  		padding-right : 150px;
+  	}
+  </style>
   <body class="p-3 m-0 border-0 bd-example">
 
     <!-- Example Code -->
     
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">메뉴</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">상품등록</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">게시판</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#">대여등록</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">대여보기</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">빌리지</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">개발진</a>
+      </li>
+    </ul>
+    <hr>
     <!-- End Example Code -->
   </body>
 </html>
