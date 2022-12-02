@@ -8,9 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<%@ include file="./bbs/header.jsp"%>
 	<%@ include file="./bbs/nav.jsp"%>
 	메인화면
 	<%@ include file="./bbs/footer.jsp"%>
+
 </body>
 </html>
