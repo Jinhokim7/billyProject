@@ -48,4 +48,7 @@
 	</table>
 	<%@ include file="./bbs/footer.jsp"%>
   </body>
+  <script>
+  	child.close();
+  </script>
 </html>

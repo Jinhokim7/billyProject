@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
@@ -26,9 +27,19 @@
           <img src="resources/img/logo.png" alt="Logo" width="100" height="50" >
         </a>
       </div>
-      <div id="login">
-      	<a href="login" onclick="window.open(this.href,'','width=500, height=400'); return false;">로그인</a>/<a href="joinForm">회원가입</a>
-      </div>
+      <c:if test="${login != null}">
+      	<div id="logininfo">
+      	Login user : ${login} 님 로그인
+      		<c:if test="${login != null}">
+      			<a href="logout">[로그아웃]</a>
+      		</c:if>
+   	  	</div>
+   	  </c:if>
+   	  <c:if test="${login == null}">
+      	<div id="login">
+      		<a href="login">로그인</a>/<a href="joinForm">회원가입</a>
+      	</div>
+      </c:if>
     </header>
     
     
