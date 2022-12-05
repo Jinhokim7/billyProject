@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
+    pageEncoding="UTF-8"%>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
@@ -10,11 +9,11 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body class="p-3 m-0 border-0 bd-example">
-    <%@ include file="./bbs/header.jsp"%>
-	<%@ include file="./bbs/nav.jsp"%>
-	<%@ include file="./bbs/notice.jsp"%>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+    <%@ include file="../bbs/header.jsp"%>
+	<%@ include file="../bbs/nav.jsp"%>
+	<%@ include file="../bbs/notice.jsp"%>
 	<table>
 		<c:forEach items="2" var="2">
 			<tr>
@@ -46,6 +45,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<%@ include file="./bbs/footer.jsp"%>
+	<%@ include file="../bbs/footer.jsp"%>
   </body>
 </html>
