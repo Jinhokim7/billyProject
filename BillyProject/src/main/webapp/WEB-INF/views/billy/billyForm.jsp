@@ -14,11 +14,13 @@
 	<%@ include file="../bbs/header.jsp"%>
 	<%@ include file="../bbs/nav.jsp"%>
 	<%@ include file="../bbs/notice.jsp"%>
-	<form name="frm" method="post" action="billeyAction"
+	
+	
+	<form name="frm" method="POST" action="billeyAction"
 		encType="multipart/form-data">
 		<div class="mb-3">
-			<label for="goodsCateLB" class="form-label">카테고리</label>
-			<select name="goodsCate" class="form-control">
+			<label for="cateNumLB" class="form-label">카테고리</label>
+			<select name="cateNum" class="form-control">
 				<option value="1">디지털기기</option>
 				<option value="2">생활가전</option>
 				<option value="3">가구/인테리어</option>
@@ -30,11 +32,11 @@
 			</select>
 		</div>
 		<div class="mb-3">
-			<label for="goodsLB" class="form-label">상품이름</label> <input
-				type="text" class="form-control" name="goodsTitle">
+			<label for="gNameLB" class="form-label">상품이름</label> <input
+				type="text" class="form-control" name="gName">
 		</div>
 		<div class="mb-3">
-			<label for="disabledSelect1" class="form-label">지역 선택 </label>
+			<label for="gLocaLB" class="form-label">지역 선택 </label>
 			<div class="search_boxes">
 				<span class="search_box"> 
 					<select name="sido1" id="sido1"></select>
@@ -43,17 +45,17 @@
 			</div>
 			<div class="mb-3">
 				<label for="dateSelect" class="form-label">날짜 선택 </label><br>
-					<input type="text" name="from" id="from" autocomplete="off" placeholder="시작일">
-					<input type="text" name="to" id="to" autocomplete="off" placeholder="종료일">
+					<input type="text" name="gStrDate" id="from" autocomplete="off" placeholder="시작일">
+					<input type="text" name="gEndDate" id="to" autocomplete="off" placeholder="종료일">
 			
 			</div>
 			<div class="mb-3">
-				<label for="goodsPrice" class="form-label">가격</label> <input
-					type="number" class="form-control" name="goodsPrice">
+				<label for="gPriceLB" class="form-label">가격</label> <input
+					type="number" class="form-control" name="gPrice">
 			</div>
 			<div class="mb-3">
-				<label for="goodsTextLB" class="form-label">내용</label>
-				<textarea class="form-control" name="goodsText"></textarea>
+				<label for="gTextLB" class="form-label">내용</label>
+				<textarea class="form-control" name="gText"></textarea>
 			</div>
 			<div class="mb-3">
 				<label for="goodsFile" class="form-label">사진올리기</label> <input
@@ -62,7 +64,7 @@
 			</div>
 
 
-			<button type="submit" class="btn btn-primary">빌리등록</button>
+			<input type="submit" class="btn btn-primary">빌리등록</input>
 	</form>
 	<%@ include file="../bbs/footer.jsp"%>
 </body>
