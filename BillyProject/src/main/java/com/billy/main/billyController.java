@@ -36,7 +36,7 @@ public class billyController {
 		return "billy/billyForm";
 	}
 	@RequestMapping(value = "/billeyAction", method = RequestMethod.POST)
-	public String joinAction(Locale locale, Model model, BillyGoodsVO bvo, String gName ) throws Exception{
+	public String billeyAction(Locale locale, Model model, BillyGoodsVO bvo, String gName ) throws Exception{
 		//객체로 받을 때는 파라미터 이름과 객체의 변수의 이름이 일치하고  getter,setter가 있어야한다.>>자동매핑
 		System.out.println(bvo.getgEndDate()+"---디버깅용도"); 
 		System.out.println(gName);
