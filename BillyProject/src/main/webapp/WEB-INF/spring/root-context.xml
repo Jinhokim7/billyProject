@@ -29,7 +29,8 @@
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean"
 		id="sqlSessionFactory">
 		<property name="dataSource" ref="dataSource" />
-
+		<property value="classpath:/mapper/*Mapper.xml"
+			name="mapperLocations" />              <!--메퍼지정/테이블당 1개 -->
 	</bean>
 
 	<!-- mybatis 사용하기 위한 객체를 설정 이것은 스프링이 구동되면서 객체를만들어서 컨테이너에 등록시킬 것이다 지금 설정하는 
@@ -38,7 +39,11 @@
 		class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
-
+	
+	<context:component-scan base-package="com.billy.DAO"/> <!-- 지정된 패키지의 클래스파일을 스캔하여 객체로 만들어라-->
+	                    <!-- 현재 여기에는 @Repository로 설정되어 dao역할을 하는 클래스가 정의되어있음 -->
+	<context:component-scan base-package="com.billy.Service"/>
+	
 	
 	
 		
