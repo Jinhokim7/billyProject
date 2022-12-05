@@ -16,9 +16,23 @@ public class billyController {
 		return "billy/joinForm";
 	}
 	
-	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginForm(Locale locale, Model model) {
 		
-		return "billy/loginForm";
+		return "billy/login";
 	}
+	
+	@RequestMapping(value = "/billyGoods", method = RequestMethod.GET)
+	public String billyGoods(Locale locale, Model model) {
+		
+		return "billy/billyGoods";
+	}
+	
+	@RequestMapping(value = "/villageBoard", method = RequestMethod.GET)
+	public String villageBoard(Locale locale, Model model) {
+		
+		return "billy/villageBoard";
+	}
+	
+	
 }

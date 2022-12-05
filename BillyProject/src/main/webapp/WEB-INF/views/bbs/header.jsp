@@ -22,12 +22,12 @@
     
     <header class="navbar bg-light">
       <div>
-        <a href="#">
+        <a href="home">
           <img src="resources/img/logo.png" alt="Logo" width="100" height="50" >
         </a>
       </div>
       <div id="login">
-      	<a href="#">로그인</a>/<a href="joinForm">회원가입</a>
+      	<a href="login">로그인</a>/<a href="joinForm">회원가입</a>
       </div>
     </header>
     
