@@ -38,7 +38,7 @@
 	<br>
 	<br>
 	<br>
-	<form action="#" method="post">
+	<form action="loginAction" method="post">
     <div class="form-floating">
       <input type="text" class="form-control" placeholder="아이디" name="id">
       <label for="floatingInput">
@@ -58,9 +58,9 @@
     </div>
     <br>
     <button class="btn btn-primary" type="button">비밀번호 찾기</button>
-    <button type="submit" class="btn btn-primary">로그인</button>
+    <button type="submit" class="btn btn-primary" onclick='window.opener.location.reload();'>로그인</button>
     </form>
     <%@ include file="../bbs/footer.jsp"%>
-    <!-- End Example Code -->
+
   </body>
 </html>
