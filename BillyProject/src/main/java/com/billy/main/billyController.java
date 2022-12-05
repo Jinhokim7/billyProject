@@ -25,13 +25,13 @@ public class billyController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String loginForm(Locale locale, Model model) throws Exception{
+	public String login(Locale locale, Model model) throws Exception{
 		
 		return "billy/login";
 	}
 	
 	@RequestMapping(value = "/billyForm", method = RequestMethod.GET)
-	public String billyGoods(Locale locale, Model model) throws Exception {
+	public String billyForm(Locale locale, Model model) throws Exception {
 		
 		return "billy/billyForm";
 	}
