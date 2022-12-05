@@ -28,11 +28,24 @@ public class billyController {
 		return "billy/billyGoods";
 	}
 	
+	@RequestMapping(value = "/billyViewAll", method = RequestMethod.GET)
+	public String billyViewAll(Locale locale, Model model) {
+		
+		return "billy/billyViewAll";
+	}
+	
 	@RequestMapping(value = "/villageBoard", method = RequestMethod.GET)
 	public String villageBoard(Locale locale, Model model) {
 		
 		return "billy/villageBoard";
 	}
+	
+	@RequestMapping(value = "/villageForm", method = RequestMethod.GET)
+	public String villageForm(Locale locale, Model model) {
+		
+		return "village/villageForm";
+	}
+	
 	
 	
 }

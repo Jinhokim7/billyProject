@@ -16,11 +16,12 @@
 	<h3>빌리지 게시판</h3>
 	<table class="table table-sm">
 		<tr>
-			<td>글번호</td>
-			<td>제목</td>
-			<td>아이디</td>
-			<td>작성일</td>
-			<td>조회수</td>
+			<th>글번호</th>
+			<th>제목</th>
+			<th>아이디</th>
+			<th>작성일</th>
+			<th>조회수</th>
+			<th><a href="villageForm" onclick="window.open(this.href,'','width=650, height=700'); return false;">글작성</a></th>
 		</tr>
 		<tr>
 			<td>1</td>

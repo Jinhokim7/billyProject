@@ -27,7 +27,7 @@
         </a>
       </div>
       <div id="login">
-      	<a href="login">로그인</a>/<a href="joinForm">회원가입</a>
+      	<a href="login" onclick="window.open(this.href,'','width=500, height=400'); return false;">로그인</a>/<a href="joinForm">회원가입</a>
       </div>
     </header>
     
