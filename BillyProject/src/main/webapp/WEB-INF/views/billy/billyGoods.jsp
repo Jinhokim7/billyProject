@@ -112,8 +112,7 @@ $('document').ready(function() {
 	   });
 	  });
 	  
-$( function() {
-	  
+$(function() {	  
     var dateFormat = "yy/mm/dd",
       from = $( "#from" )
         .datepicker({
@@ -155,8 +154,4 @@ $( function() {
     }
   } );
   </script>
-	  
-	  
-	
-
 </html>
