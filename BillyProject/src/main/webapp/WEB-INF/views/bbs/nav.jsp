@@ -22,13 +22,13 @@
     
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="#">대여등록</a>
+        <a class="nav-link" href="billyGoods">대여등록</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">대여보기</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">빌리지</a>
+        <a class="nav-link" href="villageBoard">빌리지</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="#">개발진</a>
