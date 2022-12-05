@@ -22,7 +22,7 @@
     
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="billyGoods">빌리등록</a>
+        <a class="nav-link" href="billyForm">빌리등록</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="billyViewAll">빌리보기</a>
