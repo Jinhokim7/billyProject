@@ -11,8 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="p-3 m-0 border-0 bd-example">
-	<%@ include file="./bbs/header.jsp"%>
-	<%@ include file="./bbs/nav.jsp"%>
     <!-- Example Code -->
 	<table>
 		<c:forEach items="2" var="2">
@@ -45,7 +43,5 @@
 			</tr>
 		</c:forEach>
 	</table>
-
-	<%@ include file="./bbs/footer.jsp"%>
   </body>
 </html>
