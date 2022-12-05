@@ -19,6 +19,6 @@ public class billyController {
 	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
 	public String loginForm(Locale locale, Model model) {
 		
-		return "billy/loginForm";
+		return "billy/login";
 	}
 }
