@@ -17,5 +17,9 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		return "home";
 	}
+	@RequestMapping(value = "/billyGoods", method = RequestMethod.GET)
+	public String billyGoods(Locale locale, Model model) {
+		return "billy/billyGoods";
+	}
 	
 }

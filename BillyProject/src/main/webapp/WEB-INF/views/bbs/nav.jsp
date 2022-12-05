@@ -22,7 +22,7 @@
     
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="#">대여등록</a>
+        <a class="nav-link" href="billyGoods">대여등록</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">대여보기</a>
