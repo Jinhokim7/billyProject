@@ -10,17 +10,27 @@
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+  <style>
+	#login{
+		float:right;
+		margin-right:100px;
+	}
+  </style>
   <body class="p-3 m-0 border-0 bd-example">
 
     <!-- Example Code -->
     
-    <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="resources/img/logo.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top">
+    <header class="navbar bg-light">
+      <div>
+        <a href="#">
+          <img src="resources/img/logo.png" alt="Logo" width="100" height="50" >
         </a>
       </div>
-    </nav>
+      <div id="login">
+      	<a href="#">로그인</a>/<a href="joinForm">회원가입</a>
+      </div>
+    </header>
+    
     
     <!-- End Example Code -->
   </body>

@@ -29,8 +29,7 @@
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean"
 		id="sqlSessionFactory">
 		<property name="dataSource" ref="dataSource" />
-		<!--  <property value="classpath:/mapper/*Mapper.xml"
-			name="mapperLocations" />             메퍼지정/테이블당 1개 -->
+
 	</bean>
 
 	<!-- mybatis 사용하기 위한 객체를 설정 이것은 스프링이 구동되면서 객체를만들어서 컨테이너에 등록시킬 것이다 지금 설정하는 
