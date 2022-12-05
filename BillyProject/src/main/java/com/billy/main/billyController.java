@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.billy.VO.BillyMemberVO;
 
 import com.billy.Service.IF_billyService;
 import com.billy.VO.BillyGoodsVO;
@@ -22,6 +25,13 @@ public class billyController {
 	public String joinForm(Locale locale, Model model) {
 		
 		return "billy/joinForm";
+	}
+	
+	@RequestMapping(value = "/joinAction", method = RequestMethod.POST)
+	public String joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
+		System.out.println(bmVO.getId()+"---디버깅");
+		System.out.println(bmVO.getName()+"--이름");
+		return "redirect:/home";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
