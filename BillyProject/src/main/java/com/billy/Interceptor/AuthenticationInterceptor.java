@@ -19,7 +19,7 @@ public class AuthenticationInterceptor extends HandlerInterceptorAdapter {
 		//가져온 세션에서 login 변수를 찾아서 리턴받아라 그런데 login변수의 리턴타입을 모르니 모든변수의 최상위인 Object로 호출
 		Object obj = session.getAttribute("login");
 		if(obj== null) {//로그인 안한 경우
-			response.sendRedirect(request.getContextPath()+"/home"); // 컨트롤러로 경로 바꿈
+			response.sendRedirect(request.getContextPath()+"/login"); // 컨트롤러로 경로 바꿈
 			return false;
 		}
 		return true;//가던길 가라
