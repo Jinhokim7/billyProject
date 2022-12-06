@@ -28,10 +28,11 @@ public class billyController {
 	}
 	
 	@RequestMapping(value = "/joinAction", method = RequestMethod.POST)
-	public void joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
+	public String joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
 		System.out.println("--------디버깅----");
 		System.out.println(bmVO.getId()+"---디버깅");
 		System.out.println(bmVO.getName()+"--이름");
+		
 	}
 
 	public String wrAction(Locale locale, Model model,BillyMemberVO bmVO, MultipartFile[] file) throws Exception{
