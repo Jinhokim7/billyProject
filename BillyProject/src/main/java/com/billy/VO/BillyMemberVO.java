@@ -9,7 +9,7 @@ public class BillyMemberVO {
 	private String name;
 	private String loc;
 	private String email;
-	private String photoName;
+	//private String photoName;
 	private String pwdQuiz;
 	private String pwdAnswer;
 	
@@ -55,12 +55,14 @@ public class BillyMemberVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhotoName() {
-		return photoName;
-	}
-	public void setPhotoName(String photoName) {
-		this.photoName = photoName;
-	}
+
+	
+	/*
+	 * public String getPhotoName() { return photoName; }
+	 * 
+	 * public void setPhotoName(String photoName) { this.photoName = photoName; }
+	 */
+	
 	public String getPwdQuiz() {
 		return pwdQuiz;
 	}

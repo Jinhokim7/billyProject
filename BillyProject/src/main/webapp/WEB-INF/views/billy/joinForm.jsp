@@ -5,13 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-	rel="stylesheet">
-<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
-	rel="stylesheet">
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <title>Insert title here</title>
 </head>
 <style>
@@ -59,7 +54,7 @@
 			<img src="resources/img/logo.png" alt="Logo" width="100" height="50">
 			<span id="join">회원가입</span>
 		</div>
-			<form action="joinAction" method="POST" encType="multipart/form-data">
+			<form name="frm" action="joinAction" method="POST" encType="multipart/form-data">
 			<table id="joinTable">
 				<tr>
 					<td align=center>아이디</td>
@@ -104,19 +99,19 @@
 				</tr>
 				<tr>
 					<td align=center>비밀번호 찾기용 질문</td>
-					<td><select class="form-select"
+					<td><select class="form-select" name="pwdQuiz"
 						aria-label="Default select example">
 							<option selected="">▶ 질문을 선택하세요</option>
-							<option name="pwdQuiz" value="1">기억에 남는 추억의 장소는?</option>
-							<option name="pwdQuiz" value="2">자신의 보물 제 1호는?</option>
-							<option name="pwdQuiz" value="3">인상 깊게 읽은 책 이름은?</option>
-							<option name="pwdQuiz" value="4">다시 태어나면 되고 싶은 것은?</option>
-							<option name="pwdQuiz" value="5">내가 좋아하는 캐릭터는?</option>
-							<option name="pwdQuiz" value="6">유년시절 가장 생각나는 친구이름은?</option>
-							<option name="pwdQuiz" value="7">가장 기억에 남는 선생님 성함은?</option>
-							<option name="pwdQuiz" value="8">자신의 인생 좌우명은?</option>
-							<option name="pwdQuiz" value="9">기억에 남는 내 별명은?</option>
-							<option name="pwdQuiz" value="10">받았던 선물 중 기억에 남는 독특한 선물은?</option>
+							<option value="1">기억에 남는 추억의 장소는?</option>
+							<option value="2">자신의 보물 제 1호는?</option>
+							<option value="3">인상 깊게 읽은 책 이름은?</option>
+							<option value="4">다시 태어나면 되고 싶은 것은?</option>
+							<option value="5">내가 좋아하는 캐릭터는?</option>
+							<option value="6">유년시절 가장 생각나는 친구이름은?</option>
+							<option value="7">가장 기억에 남는 선생님 성함은?</option>
+							<option value="8">자신의 인생 좌우명은?</option>
+							<option value="9">기억에 남는 내 별명은?</option>
+							<option value="10">받았던 선물 중 기억에 남는 독특한 선물은?</option>
 					</select>
 				</td>
 				</tr>
@@ -141,7 +136,7 @@
 					</td>
 				</tr>
 			</table>
-			<input type="submit" class="btn btn-primary" value="가입하기">	
+			<input type="button" class="btn btn-primary" onclick="joinform_check();" value="가입하기">	
 			</form>	
 	</section>
 	
@@ -159,7 +154,29 @@
             }
         }).open();
     }
-    
+  	//-----------------------유효성 검사 완료해야 회원가입되게---------------------------------//
+    function joinform_check(){
+  		var inID = document.getElementById('id');
+  		var chkWord = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{8,20}$/;
+  		 if(!chkWord.test(inID)){
+         	alert('id맞지않음');
+  		 }
+  		
+  		var inpwd = document.getElementById('pwd');
+  		var inpwdChk = document.getElementById('pwdChk');
+  		var inTel = document.getElementById('tel');
+  		var inName = document.getElementById('name');
+  		var inLoc = document.getElementById('loc');
+  		var inEmail = document.getElementById('email');
+  		var inPwdQuiz = document.getElementById('pwdQuiz');
+  		var inPwdAnswer = document.getElementById('pwdAnswer');
+  		
+  		
+  	}
+  	
+  	
+  	
+  	
     //-----------------------id유효성체크---------------------------------//
     document.getElementById('id').onchange = () =>{
         var inID = document.getElementById('id').value;       
@@ -221,6 +238,7 @@
 		   document.getElementById('emailHelpInline').innerHTML ="<span style='color: red;'>이메일 형식이 올바르지 않습니다!</span>";
 	   }  
    }
+   
    
 </script>
 </html>
