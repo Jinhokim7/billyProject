@@ -53,13 +53,13 @@
 <body>
 	<%@ include file="../bbs/header.jsp"%>
 	<%@ include file="../bbs/nav.jsp"%>
-	<form action="joinAction" method="post" encType="multipart/form-data">
+	
 	<section id="joinForm">
 		<div id="joinTop">
 			<img src="resources/img/logo.png" alt="Logo" width="100" height="50">
 			<span id="join">회원가입</span>
 		</div>
-		
+			<form action="joinAction" method="POST" encType="multipart/form-data">
 			<table id="joinTable">
 				<tr>
 					<td align=center>아이디</td>
@@ -141,10 +141,10 @@
 					</td>
 				</tr>
 			</table>
-			<input type="submit" class="btn btn-primary" value="가입하기">
-		
+			<input type="submit" class="btn btn-primary" value="가입하기">	
+			</form>	
 	</section>
-	</form>
+	
 	<%@ include file="../bbs/footer.jsp"%>
 </body>
 <script
