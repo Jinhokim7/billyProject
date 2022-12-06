@@ -8,12 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.billy.VO.BillyMemberVO;
 import com.billy.Service.IF_billyService;
 import com.billy.VO.BillyGoodsVO;
+import com.billy.VO.BillyMemberVO;
 
 @Controller
 public class billyController {
@@ -22,19 +21,20 @@ public class billyController {
 	private IF_billyService bsrv;
 	
 	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
-	public String joinForm(Locale locale, Model model) {
-		
+	public String joinForm(Locale locale, Model model) throws Exception {
+
 		return "billy/joinForm";
 	}
 	
 	@RequestMapping(value = "/joinAction", method = RequestMethod.POST)
-	public String joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
-		System.out.println("--------디버깅----");
-		System.out.println(bmVO.getId()+"---디버깅");
-		System.out.println(bmVO.getName()+"--이름");
-		
-	}
+	   public String joinAction(Locale locale, Model model,BillyMemberVO bmVO, MultipartFile[] file) throws Exception{
+	      //객체로 받을 때는 파라미터 이름과 객체의 변수의 이름이 일치하고  getter,setter가 있어야한다.>>자동매핑
+	      System.out.println(bmVO.getName()+"---디버깅용도"); 
+	   
+	      return "redirect:/home";
+	   }
 
+	
 	public String wrAction(Locale locale, Model model,BillyMemberVO bmVO, MultipartFile[] file) throws Exception{
 		//객체로 받을 때는 파라미터 이름과 객체의 변수의 이름이 일치하고  getter,setter가 있어야한다.>>자동매핑
 		System.out.println(bmVO.getName()+"---디버깅용도"); 
@@ -52,17 +52,22 @@ public class billyController {
 	
 	@RequestMapping(value = "/billyForm", method = RequestMethod.GET)
 	public String billyForm(Locale locale, Model model) throws Exception {
-		
+		int billyGnum=bsrv.selectMaxCnt();
+		model.addAttribute("billyGnum", billyGnum);
+		System.out.println(billyGnum+"--글번호 컨트롤러단 디버깅");//등록된 글중 마지막번호에서 +1
 		return "billy/billyForm";
 	}
 	@RequestMapping(value = "/billeyAction", method = RequestMethod.POST)
-	public String billeyAction(Locale locale, Model model, BillyGoodsVO bvo, String gName ) throws Exception{
+	public String billeyAction(Locale locale, Model model, BillyGoodsVO bvo, MultipartFile[] file) throws Exception{
 		//객체로 받을 때는 파라미터 이름과 객체의 변수의 이름이 일치하고  getter,setter가 있어야한다.>>자동매핑
 		System.out.println(bvo.getgEndDate()+"---디버깅용도"); 
-		System.out.println(gName);
+		System.out.println(bvo.getId());
+		bvo.setgLoc(bvo.getSido1()+"/"+bvo.getGugun1());
+		System.out.println(bvo.getgLoc());
 		System.out.println(bvo.getCateNum());
 		System.out.println(bvo.getgPrice());
-//		bsrv.insertOne(bvo);			
+		String[] fileNames = fileDataUtil.fileUpload(file);		
+		bsrv.insertOne(bvo);			
 //		return "redirect:/billyViewAll";
 		return "billy/login";
 	}

@@ -6,12 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.billy.DAO.IF_billyDAO">
 
 	<insert id="insertOne" parameterType="com.billy.VO.BillyGoodsVO">
-	<!-- 완성된 쿼리문
-		insert into billyGoods
-		values(#{id},#{gNum},#{cateNum},#{gName},#{gLoca},#{gStrDate},#{gEndDate},#{gPrice},#{gText})
-	 -->
-	 	insert into billyGoods
-		values(a,2,#{cateNum},#{gName},#{gLoca},#{gStrDate},#{gEndDate},#{gPrice},#{gText})	
+		insert into billyGoods values(#{id},#{gNum},#{cateNum},#{gName},#{gLoc},#{gStrDate},#{gEndDate},#{gPrice},#{gText}) 
 	</insert>
+	<select id="selectMaxCnt" resultType="int">
+		select max(gNum) as maxNum from billygoods	
+	</select>
 
 </mapper>

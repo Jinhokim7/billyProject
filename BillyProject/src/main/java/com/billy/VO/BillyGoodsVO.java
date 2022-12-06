@@ -6,8 +6,9 @@ public class BillyGoodsVO {
 	private String gTitle; //글 제목
 	private int cateNum; //카데고리번호
 	private String gName; //상품이름
-	private String sido1; //지역이름
-	private String gugun1; //지역이름
+	private String sido1; //지역이름1
+	private String gugun1; //지역이름2
+	private String gLoc;	//최종 지역이름
 	private String gStrDate; //시작일
 	private String gEndDate; //종료일
 	private int gPrice; //가격 
@@ -55,6 +56,12 @@ public class BillyGoodsVO {
 	}
 	public void setGugun1(String gugun1) {
 		this.gugun1 = gugun1;
+	}
+	public String getgLoc() {
+		return gLoc;
+	}
+	public void setgLoc(String gLoc) {
+		this.gLoc = gLoc;
 	}
 	public String getgStrDate() {
 		return gStrDate;

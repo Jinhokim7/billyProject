@@ -14,13 +14,13 @@
 	<%@ include file="../bbs/header.jsp"%>
 	<%@ include file="../bbs/nav.jsp"%>
 	<%@ include file="../bbs/notice.jsp"%>
-	
-	
+
+
 	<form name="frm" method="POST" action="billeyAction"
 		encType="multipart/form-data">
 		<div class="mb-3">
-			<label for="cateNumLB" class="form-label">카테고리</label>
-			<select name="cateNum" class="form-control">
+			<label for="cateNumLB" class="form-label">카테고리</label> <select
+				name="cateNum" class="form-control">
 				<option value="1">디지털기기</option>
 				<option value="2">생활가전</option>
 				<option value="3">가구/인테리어</option>
@@ -31,6 +31,11 @@
 				<option value="8">기타</option>
 			</select>
 		</div>
+		<div>
+			<!-- 아이디정보 -->
+			<input type="hidden" name="id" value="${login}"> <input
+				type="hidden" name="gNum" value="${billyGnum}">
+		</div>
 		<div class="mb-3">
 			<label for="gNameLB" class="form-label">상품이름</label> <input
 				type="text" class="form-control" name="gName">
@@ -38,33 +43,33 @@
 		<div class="mb-3">
 			<label for="gLocaLB" class="form-label">지역 선택 </label>
 			<div class="search_boxes">
-				<span class="search_box"> 
-					<select name="sido1" id="sido1"></select>
+				<span class="search_box"> <select name="sido1" id="sido1"></select>
 					<select name="gugun1" id="gugun1"></select>
 				</span>
 			</div>
-			<div class="mb-3">
-				<label for="dateSelect" class="form-label">날짜 선택 </label><br>
-					<input type="text" name="gStrDate" id="from" autocomplete="off" placeholder="시작일">
-					<input type="text" name="gEndDate" id="to" autocomplete="off" placeholder="종료일">
-			
-			</div>
-			<div class="mb-3">
-				<label for="gPriceLB" class="form-label">가격</label> <input
-					type="number" class="form-control" name="gPrice">
-			</div>
-			<div class="mb-3">
-				<label for="gTextLB" class="form-label">내용</label>
-				<textarea class="form-control" name="gText"></textarea>
-			</div>
-			<div class="mb-3">
-				<label for="goodsFile" class="form-label">사진올리기</label> <input
-					type="file" class="form-control" name="file"> <input
-					type="file" class="form-control" name="file">
-			</div>
+		</div>
+		<div class="mb-3">
+			<label for="dateSelect" class="form-label">날짜 선택 </label><br> <input
+				type="text" name="gStrDate" id="from" autocomplete="off"
+				placeholder="시작일"> <input type="text" name="gEndDate"
+				id="to" autocomplete="off" placeholder="종료일">
+		</div>
+		<div class="mb-3">
+			<label for="gPriceLB" class="form-label">가격</label> <input
+				type="number" class="form-control" name="gPrice">
+		</div>
+		<div class="mb-3">
+			<label for="gTextLB" class="form-label">내용</label>
+			<textarea class="form-control" name="gText"></textarea>
+		</div>
+		<div class="mb-3">
+			<label for="goodsFile" class="form-label">사진올리기</label> <input
+				type="file" class="form-control" name="file"> <input
+				type="file" class="form-control" name="file">
+		</div>
 
 
-			<input type="submit" class="btn btn-primary">빌리등록</input>
+		<input type="submit" class="btn btn-primary">
 	</form>
 	<%@ include file="../bbs/footer.jsp"%>
 </body>

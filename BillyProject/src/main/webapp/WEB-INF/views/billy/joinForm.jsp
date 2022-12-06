@@ -154,10 +154,10 @@
             }
         }).open();
     }
-<<<<<<< HEAD
+
     
     //-----------------------id유효성체크---------------------------------
-=======
+
   	//-----------------------유효성 검사 완료해야 회원가입되게---------------------------------//
     function joinform_check(){
   		var inID = document.getElementById('id');
@@ -182,7 +182,7 @@
   	
   	
     //-----------------------id유효성체크---------------------------------//
->>>>>>> branch 'master' of https://github.com/Jinhokim7/billyProject.git
+
     document.getElementById('id').onchange = () =>{
         var inID = document.getElementById('id').value;       
         var chkWord = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]{8,20}$/;

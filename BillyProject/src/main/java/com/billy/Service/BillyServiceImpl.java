@@ -16,7 +16,14 @@ public class BillyServiceImpl implements IF_billyService {
 
 	@Override
 	public void insertOne(BillyGoodsVO bvo) throws Exception { //빌리등록
-		billyDao.insertOne(bvo);		
+		billyDao.insertOne(bvo);	
+		System.out.println(bvo.getId()+"-------service디버깅");
+	}
+
+	@Override
+	public int selectMaxCnt() throws Exception {
+		System.out.println(billyDao.selectMaxCnt()+"---service디버깅");
+		return billyDao.selectMaxCnt()+1; //마지막 글번호에서 +1
 	}
 
 }

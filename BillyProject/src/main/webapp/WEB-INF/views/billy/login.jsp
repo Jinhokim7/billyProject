@@ -30,7 +30,7 @@
 
     <!-- Example Code -->
 	<div id="header">
-        <a href="#">
+        <a href="home">
           <img src="resources/img/logo.png" alt="Logo" width="100" height="50" >
         </a>
     </div>
