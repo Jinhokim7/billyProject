@@ -9,9 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.billy.VO.BillyMemberVO;
-
 import com.billy.Service.IF_billyService;
 import com.billy.VO.BillyGoodsVO;
 
@@ -28,12 +28,20 @@ public class billyController {
 	}
 	
 	@RequestMapping(value = "/joinAction", method = RequestMethod.POST)
-	public String joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
+	public void joinAction(Locale locale, Model model, BillyMemberVO bmVO) throws Exception { 
 		System.out.println("--------디버깅----");
 		System.out.println(bmVO.getId()+"---디버깅");
 		System.out.println(bmVO.getName()+"--이름");
+	}
+
+	public String wrAction(Locale locale, Model model,BillyMemberVO bmVO, MultipartFile[] file) throws Exception{
+		//객체로 받을 때는 파라미터 이름과 객체의 변수의 이름이 일치하고  getter,setter가 있어야한다.>>자동매핑
+		System.out.println(bmVO.getName()+"---디버깅용도"); 
+	
+
 		return "redirect:/home";
 	}
+
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) throws Exception{
