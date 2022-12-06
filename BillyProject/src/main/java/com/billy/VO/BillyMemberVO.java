@@ -9,7 +9,7 @@ public class BillyMemberVO {
 	private String name;
 	private String loc;
 	private String email;
-	//private String photoName
+	//private String photoName;
 	private String pwdQuiz;
 	private String pwdAnswer;
 	
