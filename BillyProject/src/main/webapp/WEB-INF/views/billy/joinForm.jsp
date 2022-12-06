@@ -191,7 +191,37 @@
         	inID.value='';
         }
      }
-    
+
+  //-----------------------id중복체크---------------------------------//
+      $('#idChk').click(function() {
+         console.log("keyup 테스트");
+         var id = $('#id').val(); // .id_input에 입력되는 값
+         var data = {
+            id : id
+         } // '컨트롤에 넘길 데이터 이름' : '데이터(.id_input에 입력되는 값)'
+         if ($('#id').val() == '') {
+        	 document.getElementById('idHelpInline').innerHTML ="<span style='color: red;'>이미 존재하는 ID입니다!</span>";
+             return;
+           }
+         $.ajax({
+            type : "post",
+            url : "idChk",
+            data : data,
+            success : function(result) {
+               if (result != 'fail') {
+            	   document.getElementById('idHelpInline').innerHTML ="<span style='color: green;'>사용가능한 아이디입니다</span>";
+            	   document.getElementById('id').readOnly=true;
+            	   $('#id_check_sucess').show();
+            	   $('#idChk').hide();
+               } else {
+            	   document.getElementById('idHelpInline').innerHTML ="<span style='color: red;'>ID를 입력하세요!</span>";
+               }// success 종료
+            }
+         }); // ajax 종료   
+
+      });// function 종료
+
+
    //-----------------------비밀번호 유효성체크 & 비밀번호 확인---------------------------------//
    document.getElementById('pwd').onchange = () =>{
 		var inPwd = document.getElementById('pwd').value;
