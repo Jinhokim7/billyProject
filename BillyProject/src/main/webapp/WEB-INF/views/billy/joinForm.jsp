@@ -279,7 +279,6 @@
             url : "idChk",
             data : data,
             success : function(result) {
-               console.log("성공 여부");
                if (result != 'fail') {
             	   document.getElementById('idHelpInline').innerHTML ="<span style='color: green;'>사용가능한 아이디입니다</span>";
             	   document.getElementById('id').readOnly=true;
