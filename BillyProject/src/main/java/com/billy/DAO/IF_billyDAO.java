@@ -9,6 +9,7 @@ public interface IF_billyDAO {
 
 	
 	public void insertOne(BillyGoodsVO bvo) throws Exception;
+	public void insertAttach(String filename) throws Exception;
 	public int selectMaxCnt() throws Exception;
 
 }

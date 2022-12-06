@@ -28,4 +28,10 @@ public class BillyDAOImpl implements IF_billyDAO{
 		return sqlSession.selectOne(mapperQuery+".selectMaxCnt");
 	}
 
+	@Override
+	public void insertAttach(String filename) throws Exception {
+		sqlSession.insert(mapperQuery+".billy_attach",filename);		
+		
+	}
+
 }

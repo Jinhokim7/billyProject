@@ -13,12 +13,15 @@ import org.springframework.web.multipart.MultipartFile;
 import com.billy.Service.IF_billyService;
 import com.billy.VO.BillyGoodsVO;
 import com.billy.VO.BillyMemberVO;
+import com.billy.util.FileDataUtil;
 
 @Controller
 public class billyController {
 	
 	@Inject		// 나 서비스 주입
 	private IF_billyService bsrv;
+	@Inject
+	private FileDataUtil fileDataUtil;
 	
 	@RequestMapping(value = "/joinForm", method = RequestMethod.GET)
 	public String joinForm(Locale locale, Model model) throws Exception {
@@ -66,7 +69,8 @@ public class billyController {
 		System.out.println(bvo.getgLoc());
 		System.out.println(bvo.getCateNum());
 		System.out.println(bvo.getgPrice());
-		String[] fileNames = fileDataUtil.fileUpload(file);		
+		String[] fileNames = fileDataUtil.fileUpload(file);
+		bvo.setFiles(fileNames);
 		bsrv.insertOne(bvo);			
 //		return "redirect:/billyViewAll";
 		return "billy/login";

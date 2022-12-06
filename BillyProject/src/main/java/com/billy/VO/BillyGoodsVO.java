@@ -13,7 +13,14 @@ public class BillyGoodsVO {
 	private String gEndDate; //종료일
 	private int gPrice; //가격 
 	private String gText;
+	private String[] files;	//클라이언트로부터 파일을 바로 저장하는것이 아니라, 컨트롤러가 작업해서 세팅한다.
 	
+	public String[] getFiles() {
+		return files;
+	}
+	public void setFiles(String[] files) {
+		this.files = files;
+	}
 	public String getId() {
 		return id;
 	}

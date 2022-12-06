@@ -18,6 +18,15 @@ public class BillyServiceImpl implements IF_billyService {
 	public void insertOne(BillyGoodsVO bvo) throws Exception { //빌리등록
 		billyDao.insertOne(bvo);	
 		System.out.println(bvo.getId()+"-------service디버깅");
+		String [] fname= bvo.getFiles();
+		if(fname != null) {
+			for(int i = 0 ; i < fname.length; i++) {
+				if(fname[i]!=null) {
+					billyDao.insertAttach(fname[i]);
+				}				
+			}
+		}
+		
 	}
 
 	@Override
